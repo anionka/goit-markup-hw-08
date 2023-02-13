@@ -1,0 +1,132 @@
+@use "../utils/mixins" as m;
+
+.nav-mobile-container {
+    display:flex;
+    position:fixed;
+    flex-direction: column;
+    top:0;
+    left:0;
+    z-index:3;
+    width: 100vw;
+    height: 100vh;
+    padding: 48px 40px;
+    
+    justify-content: space-between;
+    background-color: var(--bgcolor);
+    box-shadow: var(--shadow-nav-mobile);
+
+    transform: translateX(100%);
+    transition: transform $timing-function,
+    fill $timing-function;
+}
+
+.is-open {
+    transform: translateX(0);
+}
+
+.button-open-nav {
+  display: flex;
+  padding: 0;
+  border: none;
+  background-color: var(--bgcolor);
+  transition: fill $timing-function;
+  cursor: pointer;
+
+
+  &:is(:hover, :focus-visible) &__svg {
+    fill: var(--bgcolor-page-active);
+    transition: fill $timing-function;
+  }
+  @include m.mq(medium) {
+      display: none;
+  }
+}
+.button-close {
+  display: flex;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 10px;
+  background-color: var(--bgcolor);
+  border: none;
+  outline:none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  .button-close__svg {
+      fill: var(--font-color-black);
+  }
+
+  &:is(:hover, :focus-visible) &__svg {
+      fill: var(--bgcolor-page-active);
+      transition: fill $timing-function;
+  }
+}
+.nav-mobile {
+    &__item {
+        &:nth-child(1) {
+            margin-block-end: 32px;
+        }
+        &:nth-child(2) {
+            margin-block-end: 32px;
+        }
+    }
+    &__link {
+        color: var(--font-color-prim);
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 47px;
+        letter-spacing: 0.02em;
+    }
+}
+
+.link--active {
+  transition: var(--transition-color);
+  &:is(:hover, :focus) {
+      color: var(--font-color-hover);
+  }
+}
+
+.contact-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-block-end: 34px;
+  &__link {
+      font-weight: 500;
+      letter-spacing: 0.02em;
+
+      &--phone {
+          color: var(--font-color-hover);
+          font-size: 20px;
+          line-height: 40px;
+          white-space: nowrap;
+          @include m.mq(tiny, and, small) {
+              font-size: 26px;
+          }
+          @include m.mq(small) {
+              font-size: 34px;
+          }
+      }
+      &--email {
+          color: var(--font-color-sec);
+          font-size: 24px;
+          font-size: 17px;
+          line-height: 28px;
+          @include m.mq(tiny, and, small) {
+              font-size: 17px;
+          }
+          @include m.mq(small) {
+              font-size: 24px;
+          }
+      }
+  }
+  @include m.mq(tiny) {
+      margin-block-end: 64px;
+  }
+  @include m.mq(small) {
+      gap: 32px;
+  }
+}
+
+

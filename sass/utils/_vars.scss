@@ -1,0 +1,62 @@
+
+:root {
+  /* FONTS */
+  --ff: Roboto, sans-serif;
+  --ff-logo: Raleway, sans-serif;
+  --fs: 16px;
+
+  /* FONT COLORS */
+  --font-color-prim: #212121; /* 4: nav in header; h2 i h3, filters' buttons */
+  --font-color-sec: #757575; /* 4: contact mail&phone; p; */
+  --font-color-hover: #2196f3; /* 4: hover and logo "web" part*/
+  --font-color-white: #fff; /* 4: h1, button in h1, street, logo part footer, portfolio-button:hover */
+  --font-color-black: #000; /* 4: logo-part header,  */
+  --font-color-contact-footer: rgba(255,255,255,0.6); /* 4: footer mail & phone */
+
+  /* BACKGROUND */
+  --bgcolor: #fff; /* main */
+  --bgcolor-dark: #2f303a; /* 4: banner & footer */
+  --bgcolor-fade: #f5f4fa; /* 4 "our team" section */
+  --bgcolor-smedia-footer: rgba(255, 255, 255, 0.1);
+  --bgcolor-scope-overlay: #2f303acc;
+  --bgcolor-card-overlay: #2196f3e5;
+  --bgcolor-page-active: #2196f3;
+  --bgcolor-modal: #fff;
+
+  /* BUTTONS BACKGROUND */
+  --bgcolor-button-banner: #2196f3;
+  --bgcolor-button-banner-hover: #1076c9;
+  --bgcolor-button-filter: #f5f4fa;
+  --bgcolor-button-filter-hover: #2196f3;
+
+  /* FORM COLORS * - additional */
+  --font-color-placeholder-footer: #ffffff99;
+  --font-color-form-placeholder: #75757580;
+
+  /* BORDERS */
+  --border-header: 1px solid #ececec;
+  --border-porfolio-items: 1px solid #eeeeee;
+  --border-client-items: 1px solid #afb1b8;
+  --border-client-items-hover: 1px solid #2196f3;
+  --border-newsletter-footer: 1px solid rgba(255, 255, 255, 0.3);
+  --border-form-input: 1px solid #21212133;
+  --border-color-form-input-focus: #2196f3;
+  --border-form-button-close: 1px solid #0000001a;
+  --border-form-checkmark: 2px solid #212121;
+
+  /* SHADOWS */
+  --shadow-team: 0px 2px 1px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);--shadow-newsletter-footer: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  --shadow-nav-mobile: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+
+  /* SHADOW BUTTONS */
+  --shadow-button: 0px 4px 4px 0px #00000026;
+  --shadow-button-menu-hover: 0px 2px 2px 0px #0000001f,
+    0px 1px 2px 0px #00000014, 0px 3px 1px 0px #0000001a;
+  --shadow-portfolio-card-item-hover: 1px 4px 6px 0px #00000029,
+    0px 4px 4px 0px #0000000f, 0px 1px 1px 0px #0000001f;
+  --shadow-modal: 0px 1px 3px rgba(0, 0, 0, 0.12),
+  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+$timing-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 

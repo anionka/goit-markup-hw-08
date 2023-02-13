@@ -1,0 +1,52 @@
+/* BANNER */
+.banner {
+  color: var(--font-color-sec);
+  background-color: var(--bgcolor-dark);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 50%
+    ),
+    url(../images/banner-bckgr.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px 0px var(--color-shadow);
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 12.5rem 0;
+
+ &__title {
+  font-size: 2.75rem;
+  font-weight: 900;
+  line-height: 1.364; 
+  letter-spacing: 0.06em;
+  color: var(--font-color-white);
+  margin-bottom: 30px;
+
+  &--over {
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  }
+}
+&__button {
+  padding: 10px 41.5px;
+  border: none;
+  border-radius: 4px;
+  color: var(--font-color-white);
+  font-size: var(--ff);
+  font-weight: 700;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  background-color: var(--bgcolor-button-banner);
+  box-shadow: var(--shadow-button);
+  &:hover,
+  &:focus-visible {
+    background-color: var(--bgcolor-button-banner-hover);
+    transition: background-color $timing-function;
+    cursor:pointer;
+  }
+ }
+}

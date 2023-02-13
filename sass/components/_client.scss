@@ -1,0 +1,22 @@
+/* "nasi klienci" section */
+.client__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.client__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: var(--border-client-items);
+  border-radius: 4px;
+  &:hover,
+  &:focus {
+    --color5: var(--font-color-hover);
+    border: var(--border-client-items-hover);
+    transition: border-color $timing-function;
+  } 
+}

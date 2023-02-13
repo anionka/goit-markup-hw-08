@@ -1,0 +1,74 @@
+@use "../utils/mixins" as m;
+
+.footer {
+  background-color: var(--bgcolor-dark);
+
+&__arrange {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 60px;
+  column-gap: 144px;
+  flex-wrap: wrap;
+
+  @include m.mq(large) {
+    & {
+        column-gap: 0;
+    }
+}
+}
+&__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+  &:nth-child(1) {
+    @include m.mq(large) {
+        & {
+  margin-right: 70px;
+        }
+      }
+    }
+
+  &:nth-child(2) {
+    @include m.mq(large) {
+      & {
+  margin-right: 78px;
+       }
+     }
+    }
+    @include m.mq(large) {
+      & {
+          align-items: start;
+
+          text-align: left;
+      }
+  }
+}
+&__title {
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--font-color-white);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+}
+}
+
+.footer.section {
+  padding: 60px 0;
+}
+
+.footer .logo__sec-footer {
+  color: var(--font-color-white);
+}
+
+.footer .smedia__logo {
+  background-color: var(--bgcolor-smedia-footer);
+  --color5: var(--font-color-white);
+}
+.footer .smedia__logo:hover {
+  background-color: var(--font-color-hover);
+}

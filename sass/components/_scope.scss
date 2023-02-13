@@ -1,0 +1,29 @@
+/* "czym się zajmujemy" section */
+.scope__title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 1.167;
+  letter-spacing: 0.03em;
+}
+.scope__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.scope__item{
+  position: relative;
+}
+.scope__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bgcolor-scope-overlay);
+}
+.scope-overlay__title {
+  color: var(--font-color-white);
+  text-transform: uppercase;
+}

@@ -1,0 +1,24 @@
+/* social media */
+.smedia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  
+&__logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus-visible {
+  --color5: var(--font-color-white);
+  background-color: var(--font-color-hover);
+  transition: background-color $timing-function;
+  }
+ }
+}

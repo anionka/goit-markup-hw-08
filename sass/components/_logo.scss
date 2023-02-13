@@ -1,0 +1,15 @@
+.logo {
+  font-family: var(--ff-logo);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: calc(30/26);
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  padding-inline-start: 40px;
+  &__prim {
+    color: var(--font-color-hover);
+  }
+  &__sec {
+    color: var(--font-color-black);
+  }
+}

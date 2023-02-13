@@ -1,0 +1,37 @@
+.nav__list,
+.contact__list {
+  display: flex;
+}
+.nav__list {
+  gap: 46px;
+}
+.contact__list {
+  gap: 50px;
+}
+.nav__link,
+.contact__link {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: calc(16 / 14);
+  letter-spacing: 0.02em;
+}
+.nav__link {
+  color: var(--font-color-prim);
+  &:hover,
+  &:focus-visible{
+  color: var(--font-color-hover);
+  transition: color $timing-function;
+  }
+}
+.contact__link {
+  color: var(--font-color-sec);
+  &:hover,
+  &:focus-visible{
+  color: var(--font-color-hover);
+  transition: color $timing-function;
+  }
+}
+.contact__link:hover > .contact__svg,
+.contact__link:focus > .contact__svg {
+  --color4: var(--font-color-hover);
+}

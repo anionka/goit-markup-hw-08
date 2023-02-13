@@ -1,0 +1,29 @@
+/* "NASZE ATUTY" SECTION */
+.assets__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.assets__svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 0px;
+  background-color: var(--bgcolor-skill-svg);
+  border-radius: 4px;
+}
+.assets__title {
+  margin-bottom: 10px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+.assets__text {
+  color: var(--font-color-sec);
+  font-size: 0.875rem;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
