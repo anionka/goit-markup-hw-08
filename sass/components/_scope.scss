@@ -1,29 +1,40 @@
+@use "../utils/mixins" as m;
 /* "czym się zajmujemy" section */
-.scope__title {
-  text-align: center;
+
+.scope {
+  display: none;
+
+&__title {
   margin-bottom: 50px;
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 1.167;
-  letter-spacing: 0.03em;
 }
-.scope__list {
+&__list {
   display: flex;
+  justify-content: justify;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
-.scope__item{
-  position: relative;
+&__item {
+  position:relative;
+  width: 370px;
 }
-.scope__overlay {
-  position: absolute;
+&__background {
+  position:absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  padding-block: 27px;
   background-color: var(--bgcolor-scope-overlay);
 }
-.scope-overlay__title {
+&__subtitle {
   color: var(--font-color-white);
   text-transform: uppercase;
+}
+&__img {
+  width: 100%;
+}
+@include m.mq(large) {
+  display: block;
+}
 }

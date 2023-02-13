@@ -1,6 +1,9 @@
+@use "../utils/mixins" as m;
+
 /* "nasi klienci" section */
 .client__list {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 30px;
@@ -17,6 +20,16 @@
   &:focus {
     --color5: var(--font-color-hover);
     border: var(--border-client-items-hover);
-    transition: border-color $timing-function;
+    transition: border-color var(--timing-function);
   } 
+  @include m.mq(medium, and, large) {
+    & {
+        width: 226px;
+    }
+}
+@include m.mq(large) {
+    & {
+        width: 170px;
+    }
+}
 }

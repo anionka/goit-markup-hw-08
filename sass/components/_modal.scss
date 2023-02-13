@@ -9,7 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity $timing-function;
+  transition: opacity var(--timing-function);
 }
 .modal {
   position: absolute;

@@ -18,7 +18,7 @@
   &:focus-visible {
   --color5: var(--font-color-white);
   background-color: var(--font-color-hover);
-  transition: background-color $timing-function;
+  transition: background-color var(--timing-function);
   }
  }
 }

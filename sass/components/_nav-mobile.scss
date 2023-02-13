@@ -16,8 +16,8 @@
     box-shadow: var(--shadow-nav-mobile);
 
     transform: translateX(100%);
-    transition: transform $timing-function,
-    fill $timing-function;
+    transition: transform var(--timing-function),
+    fill var(--timing-function);
 }
 
 .is-open {
@@ -29,13 +29,12 @@
   padding: 0;
   border: none;
   background-color: var(--bgcolor);
-  transition: fill $timing-function;
+  transition: fill var(--timing-function);
   cursor: pointer;
-
 
   &:is(:hover, :focus-visible) &__svg {
     fill: var(--bgcolor-page-active);
-    transition: fill $timing-function;
+    transition: fill var(--timing-function);
   }
   @include m.mq(medium) {
       display: none;
@@ -59,7 +58,7 @@
 
   &:is(:hover, :focus-visible) &__svg {
       fill: var(--bgcolor-page-active);
-      transition: fill $timing-function;
+      transition: fill var(--timing-function);
   }
 }
 .nav-mobile {
@@ -128,5 +127,62 @@
       gap: 32px;
   }
 }
+.socials {
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  width: 130px;
+  margin: 2px;
 
+  &__item {
+      @include m.mq(tiny, and, small) {
+          &:nth-child(2n + 1) {
+              border-inline-end: var(--border-nav-mobile-socials);
+          }
+          &:nth-child(2n) {
+              padding-inline-start: 10px;
+          }
+          &:nth-child(1) {
+              padding-inline-end: 10px;
+          }
+          &:nth-child(3) {
+              padding-inline-end: 14px;
+          }
+      }
+      @include m.mq(small) {
+          &:not(:last-child) {
+              border-inline-end: var(--border-nav-mobile-socials);
+          }
+          & {
+              padding-inline: 10px;
+          }
+          &:first-child {
+              padding-inline-start: 0;
+          }
+          &:last-child {
+              padding-inline-end: 0;
+          }
+      }
+  }
 
+  &__link {
+      color: var(--bgcolor-page-active);
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 22px;
+      letter-spacing: 0.02em;
+  }
+
+  @include m.mq(tiny, and, small) {
+      & {
+          width: 200px;
+          row-gap: 10px;
+      }
+  }
+  @include m.mq(small) {
+      & {
+          width: auto;
+      }
+  }
+}

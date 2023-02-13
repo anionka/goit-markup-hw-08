@@ -1,3 +1,4 @@
+@use "../utils/mixins" as m;
 .nav__list,
 .contact__list {
   display: flex;
@@ -15,12 +16,20 @@
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
+@include m.mq(medium) {
+  .nav {
+      margin-inline-start: 83px;
+  }
+  .nav__list {
+      gap: 60px;
+  }
+}
 .nav__link {
   color: var(--font-color-prim);
   &:hover,
   &:focus-visible{
   color: var(--font-color-hover);
-  transition: color $timing-function;
+  transition: color var(--timing-function);
   }
 }
 .contact__link {
@@ -28,7 +37,7 @@
   &:hover,
   &:focus-visible{
   color: var(--font-color-hover);
-  transition: color $timing-function;
+  transition: color var(--timing-function);
   }
 }
 .contact__link:hover > .contact__svg,

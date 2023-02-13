@@ -1,6 +1,6 @@
-@import "./utils/vars";
-@import "./utils/global";
-@import "./utils/mixins";
+@use "./utils/vars";
+@use "./utils/global";
+@use "./utils/mixins" as m;
 
 @import "./components/header";
 @import "./components/logo";

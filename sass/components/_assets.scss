@@ -4,7 +4,20 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
+  flex-wrap: wrap;
 }
+
+.assets__item {
+    max-width: 450px;
+
+    @include m.mq(medium, and, large) {
+        max-width: 354px;
+    }
+    @include m.mq(large) {
+        max-width: 270px;
+    }
+}
+
 .assets__svg {
   display: flex;
   justify-content: center;
@@ -14,12 +27,18 @@
   background-color: var(--bgcolor-skill-svg);
   border-radius: 4px;
 }
+
 .assets__title {
   margin-bottom: 10px;
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  @include m.mq(medium) {
+    & {
+        text-align: left;
+    }
+}
 }
 .assets__text {
   color: var(--font-color-sec);

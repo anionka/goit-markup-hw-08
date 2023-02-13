@@ -1,3 +1,4 @@
+@use "../utils/vars" as *;
 @use "sass:map";
 
 $breakpoints: (
@@ -12,19 +13,20 @@ $breakpoints: (
 }
 
 @mixin mq($key, $add: null, $key2: null) {
-  $size: map.get($breakpoints, $key);
-  $size2: map.get($breakpoints, $key2);
+    $size: map.get($breakpoints, $key);
+    $size2: map.get($breakpoints, $key2);
 
-  @if ($add == null) {
-      @media (min-width: $size) {
-          @content;
-      }
-  } @else if ($add == and) {
-      @media (min-width: $size) and (max-width: calc($size2 - 1px)) {
-          @content;
-      }
-  }
+    @if ($add == null) {
+        @media (min-width: $size) {
+            @content;
+        }
+    } @else if ($add == and) {
+        @media (min-width: $size) and (max-width: calc($size2 - 1px)) {
+            @content;
+        }
+    }
 }
+
 @mixin screen-dd() {
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
       @content;

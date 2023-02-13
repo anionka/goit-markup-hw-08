@@ -12,15 +12,29 @@
   
   &__list {
     display: flex;
-    flex-flow: row;
+    flex-wrap:wrap;
     gap: 30px;
+    justify-content:center;
+    align-items: center;
   }
   &__item {
+    max-width: 270px;
     background-color: var(--bgcolor);
     box-shadow: var(--shadow-team);
     border-radius: 0px 0px 4px 4px;
+    @include m.mq(small, and, medium) {
+      & {
+          max-width: 450px;
+      }
+  }
+  @include m.mq(medium, and, large) {
+      & {
+          max-width: 354px;
+      }
+  }
   }
   &__img {
+    width:100%;
     margin-bottom: 30px;
   }
   &__name {

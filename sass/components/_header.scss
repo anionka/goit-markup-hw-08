@@ -4,7 +4,17 @@
 
   &__arrange {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
+}
+.header__item {
+  display: none;
+
+  @include m.mq(medium) {
+      display: flex;
+      align-items: center;
+      flex: 1;
+  }
 }

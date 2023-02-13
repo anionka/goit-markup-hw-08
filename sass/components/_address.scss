@@ -18,5 +18,5 @@
 .link--hover:hover,
 .link--hover:focus-visible {
   color: var(--font-color-contact-footer);
-  transition: color $timing-function;
+  transition: color var(--timing-function);
 }

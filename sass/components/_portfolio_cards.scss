@@ -17,7 +17,7 @@
   border: var(--border-porfolio-items);
   &:hover {
     box-shadow: var(--shadow-portfolio-card-item-hover);
-    transition: box-shadow $timing-function;
+    transition: box-shadow var(--timing-function);
     cursor:pointer;
   }
 }
@@ -43,7 +43,7 @@
   inset: 0;
   padding: 49px 45px 49px 24px;
   background-color: var(--bgcolor-card-overlay);
-  transition: transform $timing-function;
+  transition: transform var(--timing-function);
   transform: translateY(100%);
   pointer-events: none;
 } 

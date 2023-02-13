@@ -100,11 +100,11 @@ ul {
 .hover:hover,
 .hover:focus-visible {
   background-color: var(--bgcolor-button-filter-hover);
-  transition: background-color $timing-function;
+  transition: background-color var(--timing-function);
   color: var(--font-color-white);
-  transition: color $timing-function;
+  transition: color var(--timing-function);
   box-shadow: var(--shadow-button-menu-hover);
-  transition: box-shadow $timing-function;
+  transition: box-shadow var(--timing-function);
 }
 /* PAGE ACTIVE */
 .page--active {

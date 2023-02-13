@@ -1,3 +1,5 @@
+@use "../utils/_mixins.scss" as m;
+
 /* newsletter in FOOTER */
 .newsletter {
   display: flex;
@@ -19,7 +21,7 @@
   box-shadow: var(--shadow-newsletter-footer);
   border:none;
   border-radius: 4px;
-  transition: background-color $timing-function;
+  transition: background-color var(--timing-function);
   white-space: nowrap;
   cursor:pointer;
 }
@@ -35,7 +37,7 @@
   border: var(--border-newsletter-footer);
   border-radius: 4px;
   box-shadow: var(--shadow-newsletter-footer);
-  transition: border-color $timing-function;
+  transition: border-color var(--timing-function);
 
 &:focus {
   border-color: var(--font-color-white);
